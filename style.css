@@ -54,10 +54,6 @@ input {
   padding: 0;
   border: none;
 }
-#intro .content h3 {
-  font-size: 1.5em;
-  font-weight: 300;
-}
 #intro .content .socials {
   padding: 35px 0;
 }
