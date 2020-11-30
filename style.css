@@ -142,7 +142,13 @@ input[type=submit]:hover {
   padding-bottom: 5%;
 }
 
-#memes{
-    font-size: 6mm;
-    padding-top: 2.5%;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 20px;
 }
