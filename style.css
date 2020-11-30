@@ -132,7 +132,7 @@ input[type=submit]:hover {
 
 #contact-me{
   font-size: 6mm;
-  padding-top: 2.5%;
+  padding-top: 5%;
 }
 
 
@@ -151,4 +151,13 @@ ul {
 li {
   display: inline-block;
   margin-right: 20px;
+}
+
+#IDE{
+  padding-top: 5%;
+}
+#IDE iframe{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
 }
