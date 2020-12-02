@@ -179,3 +179,7 @@ li {
 .show {
   display:block;
 }
+
+#pages{
+  padding-left: 1.7%;
+}
