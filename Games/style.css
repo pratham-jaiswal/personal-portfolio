@@ -1,0 +1,81 @@
+body{
+    background: teal;
+    color: black;
+    text-align:center;
+    margin-top: 110px;
+    font-size: 2em;
+}
+
+input, button{
+    font-size: 1.05em;
+    text-align: center;
+    border-radius: 25px;
+}
+
+a:link, a:visited, a:active{
+    color: black;
+}
+a:hover{
+    color: darkgray;
+}
+
+.rps{
+    font-size: 100px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 7px black;
+    margin: 10px;
+    padding: 15px;
+    border: none;
+    color: yellow;
+    background: rebeccapurple;
+    outline: none;
+}
+
+.rps:hover{
+    color: red;
+}
+
+.rps:active{
+    box-shadow: 0 0 2px black;
+    transform: translateY(4px);
+}
+
+#btn{
+    border-radius: 0%;
+    box-shadow: 0px;
+    font-size: 20px;
+    outline: none;
+    margin-left: 20px;
+}
+
+#btn:hover{
+    background: wheat;
+}
+
+.other{
+    font-size: 0.7em;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 10%;
+}
+
+.hc{
+    font-size: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px black;
+    margin: 5px;
+    padding: 15px;
+    border: none;
+    color: rgb(94, 0, 89);
+    background: rgba(255, 137, 1, 0.979);
+    outline: none;
+}
+
+.hc:hover{
+    background: rgb(211, 112, 0);
+}
+
+.hc:active{
+    box-shadow: 0 0 2px black;
+    transform: translateY(4px);
+}
