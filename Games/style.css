@@ -13,10 +13,10 @@ input, button{
 }
 
 a:link, a:visited, a:active{
-    color: black;
+    color: yellow;
 }
 a:hover{
-    color: darkgray;
+    color: red;
 }
 
 .rps{
@@ -79,3 +79,16 @@ a:hover{
     box-shadow: 0 0 2px black;
     transform: translateY(4px);
 }
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;   
+}
+
+.navbar ul {
+    font-size: 5mm;
+    color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
