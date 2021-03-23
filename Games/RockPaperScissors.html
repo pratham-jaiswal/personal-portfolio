@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Games</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://use.fontawesome.com/9ca8e4ce0e.js"></script>
+  </head>
+  <body>
+    <div style="margin-right: 5%;">Choose your action</div>
+    <div>
+        <button class="rps" onclick="rps(0)"><i class="fa fa-hand-rock-o"></i></button>
+        <button class="rps" onclick="rps(1)"><i class="fa fa-hand-paper-o"></i></button>
+        <button class="rps" onclick="rps(2)"><i class="fa fa-hand-scissors-o"></i></button>
+        <button id="btn" onclick="rps('reset')">Reset</button>
+        <div id="mv" style="margin-top: 10px; margin-right: 5%;">You: - | CPU: -</div>
+        <div id="ch" style="margin-right: 5%;">-</div>
+        <div style="margin-top: 10px; margin-right: 5%;">You | CPU</div>
+        <div id="pts" style="margin-right: 5.7%;">0 | 0</div>
+    </div>
+    <div class="other">
+      Play other games:
+      <li><a href="numberGuess.html">Guess The Number</a></li>
+      <li><a href="handCricket.html">Hand Cricket</a></li>
+    </div>
+  </body>
+</html>
