@@ -1,3 +1,7 @@
+$(function () {
+    $(".navbar").show();
+  });
+
 var y = Math.floor(Math.random()*101);
 function response()
 {
