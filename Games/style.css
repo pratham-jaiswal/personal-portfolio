@@ -105,4 +105,17 @@ a:hover{
     font-size: 20px;
     border-radius: 20px;
     outline: none;
+    margin-left: 4%;
   }
+
+#dicebtn{
+    border-radius: 0%;
+    box-shadow: 0px;
+    font-size: 16px;
+    outline: none;
+    margin-left: 20px;
+}
+
+#dicebtn:hover{
+    background: wheat;
+}
