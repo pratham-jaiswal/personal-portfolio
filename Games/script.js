@@ -84,36 +84,45 @@ function hc(x){
             trs.textContent = "Total Runs: "+tr.toString();
         }
     }
-
 }
 
 var p1=0, p2=1, pt1=0, pt2=0;
-function diceRoll(){
+function diceRoll(v){
   var d = Math.floor(Math.random()*6)+1;
-  if(p1==0){
-    pt1=pt1+d;
-    pl1.textContent="Player #1 : "+pt1;
-    p1=1;
-    p2=0;
-    if(pt1>=50){
-      win.textContent="Player #1 Wins";
-      p1=0;
-      p2=1;
-      pt1=0;
-      pt2=0;
+  if(v==1){
+    if(p1==0){
+        pt1=pt1+d;
+        pl1.textContent="Player #1 : "+pt1;
+        p1=1;
+        p2=0;
+        win.textContent="";
+        if(pt1>=50){
+            win.textContent="Player #1 Wins";
+            p1=0;
+            p2=1;
+            pt1=0;
+            pt2=0;
+        }
     }
-  }
-  else{
-    pt2=pt2+d;
-    pl2.textContent="Player #2 : "+pt2;
-    p2=1;
-    p1=0;
-    if(pt2>=50){
-      win.textContent="Player #2 Wins";
-      p1=0;
-      p2=1;
-      pt1=0;
-      pt2=0;
+    else{
+        pt2=pt2+d;
+        pl2.textContent="Player #2 : "+pt2;
+        p2=1;
+        p1=0;
+        win.textContent="";
+        if(pt2>=50){
+            win.textContent="Player #2 Wins";
+            p1=0;
+            p2=1;
+            pt1=0;
+            pt2=0;
+        }
     }
-  }
+ }
+ else{
+    p1=0, p2=1, pt1=0, pt2=0;
+    pl1.textContent="Player #1 : -";
+    pl2.textContent="Player #2 : -";
+    win.textContent="";
+ }
 }
