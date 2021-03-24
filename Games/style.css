@@ -6,10 +6,17 @@ body{
     font-size: 2em;
 }
 
-input, button{
+input{
     font-size: 1.05em;
     text-align: center;
     border-radius: 25px;
+}
+
+#num{
+    font-size: 1em;
+    text-align: center;
+    border-radius: 25px;
+    outline: none;
 }
 
 a:link, a:visited, a:active{
@@ -91,4 +98,11 @@ a:hover{
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+
+#dice{
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    outline: none;
   }
