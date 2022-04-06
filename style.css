@@ -103,11 +103,11 @@ section {
 
 @font-face {
   font-family: "neoneon";
-  src: url(../personal-portfolio/Fonts/Neoneon.ttf) format('truetype'),
-    url(../personal-portfolio/Fonts/Neoneon.eot) format('embedded-opentype'),
-    url(../personal-portfolio/Fonts/Neoneon.woff) format('woff'),
-    url(../personal-portfolio/Fonts/Neoneon.svg) format('svg'),
-    url(../personal-portfolio/Fonts/Neoneon.woff2) format('woff2');
+  src: url(../../personal-portfolio/Fonts/Neoneon.ttf) format('truetype'),
+    url(../../personal-portfolio/Fonts/Neoneon.eot) format('embedded-opentype'),
+    url(../../personal-portfolio/Fonts/Neoneon.woff) format('woff'),
+    url(../../personal-portfolio/Fonts/Neoneon.svg) format('svg'),
+    url(../../personal-portfolio/Fonts/Neoneon.woff2) format('woff2');
 
   font-weight: normal;
   font-style: normal;
