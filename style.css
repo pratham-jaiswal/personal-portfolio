@@ -5,7 +5,7 @@
     src: 
       url(../personal-portfolio/Assets/Fonts/Neoneon/Neoneon.ttf) format('truetype'), /* ../<repo-name>/Folders/Fonts/<font-name>.<format> is for using custom fonts on github*/
       url(../personal-portfolio/Assets/Fonts/Neoneon/Neoneon.eot) format('embedded-opentype'),
-      url(./personal-portfolio/Assets/Fonts/Neoneon/Neoneon.woff) format('woff'),  /* ../Folders/Fonts/<font-name>.<format> is for using locally and on live server */
+      url(../personal-portfolio/Assets/Fonts/Neoneon/Neoneon.woff) format('woff'),  /* ../Folders/Fonts/<font-name>.<format> is for using locally and on live server */
       url(../personal-portfolio/Assets/Fonts/Neoneon/Neoneon.svg) format('svg'),
       url(../personal-portfolio/Assets/Fonts/Neoneon/Neoneon.woff2) format('woff2');
   
