@@ -90,7 +90,7 @@ body{
     display: flex;
     justify-content: center;
     padding: 140px 0 140px;
-    background-image: url('./Assets/images/bg.jpg'); 
+    background-image: url('https://i.imgur.com/zY5n6RB.jpg'); 
     /* background-image: url('../personal-portfolio/Assets/images/bg.jpg'); - Running from GitHub Pages
        background-image: url('./Assets/images/bg.jpg'); - Running locally */
     background-repeat: no-repeat;
