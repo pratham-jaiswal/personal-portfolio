@@ -424,17 +424,29 @@ span{
 }
 
 @media screen and (max-width: 470px) {
-    .contact-icons{
+    .theme-toggle{
+        width: 10%;
+    }
+    
+    .nav-container{
         width: 90%;
     }
-}
 
-@media screen and (max-width: 470px) {
     .contact-details{
         font-size: 20px;
     }
 
     .contact-icons{
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .theme-toggle{
+        width: 5%;
+    }
+    
+    .nav-container{
+        width: 95%;
     }
 }
