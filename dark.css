@@ -451,4 +451,8 @@ span{
     .theme-toggle #theme-icon{
         height: 20px;
     }
+    
+    .contact-details{
+        font-size: 18px;
+    }
 }
