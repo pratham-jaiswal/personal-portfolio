@@ -443,10 +443,10 @@ span{
 
 @media screen and (max-width: 420px) {
     .theme-toggle{
-        width: 5%;
+        margin: auto 10px;
     }
-    
-    .nav-container{
-        width: 95%;
+
+    .theme-toggle #theme-icon{
+        height: 20px;
     }
 }
