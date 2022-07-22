@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="icon" type="image/x-icon" href="./Assets/Icons/pj.png">
+    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/6f42fc440c.js" crossorigin="anonymous"></script>
+    <title>Pratham</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="theme-toggle">
+            <img onclick="darkToggle()" id="theme-icon" src="./Assets/Icons/moon.svg" alt="toggle light/dark mode">
+            <!-- src="..new-portfolio/Assets/Icons/moon.svg" - Running on GitHub pages
+                src="./Assets/Icons/moon.svg" - Running locally -->
+        </div>
+        <div class="nav-container">
+            <a class="brief active" href="#">Home</a>
+            <a class="about" href="#about">About</a>
+            <a class="project" href="#project">Projects</a>
+            <a class="contact" href="#contact">Contact</a>
+        </div>
+    </nav>
+    <section id="brief">
+        <div id="brief-container">
+            <div class="brief-pic">
+                <img src="./Assets/Images/pfp.jpg" alt="profile picture">
+                <!--src="../personal-portfolio/Assets/Images/pfp.jpg" - Running on GitHub pages
+                    src="./Assets/Images/pfp.jpg" - Running locally -->
+            </div>
+            <div class="brief-text">
+                <div class="brief-name">
+                    Pratham <span>Jaiswal</span>
+                </div>
+                <div class="brief-description">
+                    I'm a B.Tech. student studying Computer Science and Engineering at the Vellore Institute of Technology, Chennai.
+                    <br><br>
+                    My areas of interest are coding and development. I understand Coding and Web Development intermediate level, and I'm eager to learn about Blockchain and DApp development.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-title">
+            About <span>Me</span>
+        </div>
+        <div class="about-content">
+            My name is Pratham Jaiswal. I have completed my high school from <a target="_blank" href="https://www.agcschools.edu.in/parkstreet/"><span>The Assembly of God Church School - Park Street, Kolkata, India.</span></a>
+            I'm a student currently pursuing BTech in CSE from <a href="https://chennai.vit.ac.in/"><span>Vellore Institute Of Technology - VIT Chennai, India</span></a>.
+            I'm interest in coding and development.<br><br>
+            The <span>programming languages</span> I know are:
+            <ul>
+                <li>Java - <i>Intermediate</i></li>
+                <li>C/C++ - <i>Intermediate</i></li>
+                <li>Python - <i>Basic</i></li>
+                <li>Dart - <i>Basic</i></li>
+                <li>Solidity - <i>Basic</i></li>
+            </ul><br>
+            The <span>markup languages</span> I know are:
+            <ul>
+                <li>HTML - <i>Intermediate</i></li>
+                <li>CSS - <i>Intermediate</i></li>
+            </ul><br>
+            The <span>scripting languages</span> I know are:
+            <ul>
+                <li>Javascript - <i>Basic</i></li>
+                <li>PHP - <i>Basic</i></li>
+            </ul><br>
+            The <span>frameworks</span> I know are:
+            <ul>
+                <li>Flutter - <i>Basic</i></li>
+            </ul><br>
+            I <span>know</span>:
+            <ul>
+                <li>Problem Solving - <i>Intermediate</i></li>
+                <li>Web Development - <i>Intermediate</i></li>
+            </ul><br>
+            I'm <span>currently learning</span>:
+            <ul>
+                <li>Flutter App Development</li>
+                <li>Solidity</li>
+            </ul>
+        </div>
+    </section>
+    <section id="project">
+        <div class="project-title">
+            Projects
+        </div>
+        <div class="project-content">
+            <div class="project-navigation">
+                <a class="active" href="javascript:projectToggle('all')">All</a>
+                <a href="javascript:projectToggle('web')">Web Dev</a>
+                <a href="javascript:projectToggle('app')">App Dev</a>
+                <a href="javascript:projectToggle('arduino')">Arduino</a>
+            </div>
+            <div class="project-cards">
+                <a target="_blank" href="https://github.com/pratham-jaiswal/personal-portfolio" class="web">
+                    <div class="card-flip">
+                        <div class="card">
+                            <div class="card-front stat">
+                                <img src="./Assets/Images/portfolio.png" alt="image" style="width:100%">
+                                <div class="front-container">
+                                    <div class="card-title">Personal Portfolio</div>
+                                    <div class="card-lang"><span>Languages:</span> HTML, CSS, JS</div>
+                                    <div class="card-purpose"><span>Purpose:</span> Building a Portfolio Website</div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="back-container">
+                                    <div class="card-title">Personal Portfolio</div>
+                                    <div class="card-description">
+                                        <div><span>Hosting:</span> GitHub Pages</div>
+                                        <div>
+                                            <span>Features:</span>
+                                            <li>A single page portfolio webiste</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/pratham-jaiswal/HotelBookingManagement" class="web">
+                    <div class="card-flip">
+                        <div class="card">
+                            <div class="card-front">
+                                <img src="./Assets/Images/HotelBookingManagement.png" alt="image" style="width:100%">
+                                <div class="front-container">
+                                    <div class="card-title">Hotel Room Booking Management System</div>
+                                    <div class="card-lang"><span>Languages:</span> HTML, CSS, JS, PHP</div>
+                                    <div class="card-purpose"><span>Purpose:</span> University Project</div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="back-container">
+                                    <div class="card-title">Hotel Room Booking Management System</div>
+                                    <div class="card-description">
+                                        <div><span>Hosting:</span> XAMPP Localhost</div>
+                                        <div><span>Database:</span> phpMyAdmin</div>
+                                        <div><span>Users:</span> Customer, Manager</div>
+                                        <div>
+                                            <span>Features:</span>
+                                            <li>A dynamic Web App</li>
+                                            <li>Reserve Rooms</li>
+                                            <li>Modify room prices and add discounts</li>
+                                            <li>Manage the room reservations</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/pratham-jaiswal/web-games" class="web">
+                    <div class="card-flip">
+                        <div class="card">
+                            <div class="card-front">
+                                <img src="./Assets/Images/WebGames.png" alt="image" style="width:100%">
+                                <div class="front-container">
+                                    <div class="card-title">Web Games</div>
+                                    <div class="card-lang"><span>Languages:</span> HTML, CSS, JS</div>
+                                    <div class="card-purpose"><span>Purpose:</span> Practicing basic JS</div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="back-container">
+                                    <div class="card-title">Web Games</div>
+                                    <div class="card-description">
+                                        <div><span>Hosting:</span> Replit</div>
+                                        <div>
+                                            <span>Features:</span>
+                                            <li>A simple Web App</li>
+                                            <li>Rock Paper Scissors - 1 Player</li>
+                                            <li>Guess The Number - 1 Player</li>
+                                            <li>Hand Cricket - 1 Player</li>
+                                            <li>Dice Roll Race - 2 Player</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/pratham-jaiswal/web-music-player" class="web">
+                    <div class="card-flip">
+                        <div class="card">
+                            <div class="card-front">
+                                <img src="./Assets/Images/WebMusicPlayer.png" alt="image" style="width:100%">
+                                <div class="front-container">
+                                    <div class="card-title">Web Music Player</div>
+                                    <div class="card-lang"><span>Languages:</span> HTML, CSS, JS</div>
+                                    <div class="card-purpose"><span>Purpose:</span> Practicing basic CSS animation</div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="back-container">
+                                    <div class="card-title">Web Music Player</div>
+                                    <div class="card-description">
+                                        <div><span>Hosting:</span> Replit</div>
+                                        <div>
+                                            <span>Features:</span>
+                                            <li>A single page music player</li>
+                                            <li>A simple, beautiful CSS animation</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/pratham-jaiswal/pizza-mania" class="web">
+                    <div class="card-flip">
+                        <div class="card">
+                            <div class="card-front">
+                                <img src="./Assets/Images/PizzaMania.png" alt="image" style="width:100%">
+                                <div class="front-container">
+                                    <div class="card-title">Online Pizza Ordering System</div>
+                                    <div class="card-lang"><span>Languages:</span> HTML, CSS, PHP</div>
+                                    <div class="card-purpose"><span>Purpose:</span> University Project</div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="back-container">
+                                    <div class="card-title">Online Pizza Ordering System</div>
+                                    <div class="card-description">
+                                        <div><span>Hosting:</span> XAMPP Localhost</div>
+                                        <div><span>Database:</span> phpMyAdmin</div>
+                                        <div><span>Users:</span> Customer, Manager</div>
+                                        <div>
+                                            <span>Features:</span>
+                                            <li>A dynamic Web App</li>
+                                            <li>Order Pizzas</li>
+                                            <li>Manage orders</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/pratham-jaiswal/Smart-Irrigation-System" class="arduino">
+                    <div class="card-flip">
+                        <div class="card">
+                            <div class="card-front">
+                                <img src="./Assets/Images/SmartirrigationSystem.png" alt="image" style="width:100%">
+                                <div class="front-container">
+                                    <div class="card-title">Smart Irrigation System</div>
+                                    <div class="card-lang"><span>Languages:</span> Arduino programming language</div>
+                                    <div class="card-purpose"><span>Purpose:</span> University Project</div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="back-container">
+                                    <div class="card-title">Smart Irrigation System</div>
+                                    <div class="card-description">
+                                        <div><span>Circuit:</span> Tinkercad</div>
+                                        <div>
+                                            <span>Features:</span>
+                                            <li>An Arduino Project</li>
+                                            <li>Arduino UNO R3</li>
+                                            <li>3 Soil Moisture Sensors</li>
+                                            <li>Temperature Sensor</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-title">
+            Contact <span>Me</span>
+        </div>
+        <div class="contact-content">
+            <div class="contact-details">
+                <div class="email">pratham.jaiswal2020<span>@vitstudent.ac.in</span></div>
+                <div class="email-words">pratham  <span>(dot)</span> jaiswal2020 <span>(at)</span> vitstudent <span>(dot)</span> ac <span>(dot)</span> in</div>
+            </div>
+            <div class="contact-icons">
+                <a target="_blank" href="https://www.linkedin.com/in/pratham-jaiswal/"><i class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" href="https://github.com/pratham-jaiswal"><i class="fa-brands fa-github"></i></a>
+                <a target="_blank" href="https://www.instagram.com/pratham.jazz/"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://stackoverflow.com/users/14895056/prathamj"><i class="fa-brands fa-stack-overflow"></i></a>
+                <a target="_blank" href="mailto:pratham.jaiswal2020@vitstudent.ac.in?Subject="><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+    <div class="to-top">
+        <button class="scroll-top" onclick="scrollToTop()" type="button">Back to top</button>
+    </div>
+</body>
+</html>
