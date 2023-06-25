@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="/icons/pj.png">
+    <script src="/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/6f42fc440c.js" crossorigin="anonymous"></script>
+    <title>Pratham Jaiswal</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="theme-toggle">
+            <img onclick="darkToggle()" id="theme-icon" src="/icons/moon.svg" alt="toggle light/dark mode">
+        </div>
+        <div class="nav-container">
+            <a class="brief active" href="#">Home</a>
+            <a class="about" href="#about">About</a>
+            <a class="project" href="#project">Projects</a>
+            <a class="contact" href="#contact">Contact</a>
+        </div>
+    </nav>
+    <section id="brief">
+        <div id="brief-container">
+            <div class="brief-pic">
+                <img src="https://i.imgur.com/mzscIsi.jpg" alt="profile picture">
+            </div>
+            <div class="brief-text">
+                <div class="brief-name">
+                    Pratham <span>Jaiswal</span>
+                </div>
+                <div class="brief-description">
+                    <%- desc[0].content %> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-title">
+            About <span>Me</span>
+        </div>
+        <div class="about-content">
+            <%- desc[1].content %> 
+            <ul style="list-style-type: circle;">
+                <% for (var i=0; i<skills.length; i++){%>
+                    <li><span><%= skills[i].name %>:</span> <%= skills[i].details %></li>
+                <%}%>
+            </ul>
+        </div>
+    </section>
+    <section id="project">
+        <div class="project-title">
+            Projects
+        </div>
+        <div class="project-content">
+            <div class="project-navigation">
+                <a class="active" href="javascript:projectToggle('all')">All</a>
+                <a href="javascript:projectToggle('web')">Web Dev</a>
+                <a href="javascript:projectToggle('mlai')">ML/AI</a>
+                <a href="javascript:projectToggle('dapp')">DApp</a>
+                <a href="javascript:projectToggle('arduino')">Arduino</a>
+            </div>
+            <div class="project-cards">
+                <% for (var i=0; i<projects.length; i++){%>
+                    <div id="full-card" class="<%= projects[i].category %>">
+                        <a target="_blank" href="<%= projects[i].codeLink %>">
+                            <div class="card-flip">
+                                <div class="card" id="<%= projects[i]._id %>">
+                                    <div class="card-front stat">
+                                        <img src="<%= projects[i].banner %>" alt="image" style="width:100%">
+                                        <div class="front-container">
+                                            <div class="card-title"><%= projects[i].title %></div>
+                                            <div class="card-lang"><span>Frameworks and Technologies:</span><br>
+                                                <% for (var j=0; j<projects[i].technologies.length-1; j++){%>
+                                                    <%= projects[i].technologies[j] %>,
+                                                <%}%>
+                                                <%= projects[i].technologies[j] %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="back-container">
+                                            <div class="card-title"><%= projects[i].title %></div>
+                                            <div class="card-description">
+                                                <div>
+                                                    <span>Features:</span>
+                                                    <% for (var j=0; j<projects[i].features.length; j++){%>
+                                                        <li><%= projects[i].features[j] %></li>
+                                                    <%}%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="flip-button" type="button" onclick="flipCard('<%= projects[i]._id %>')">Flip</button>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-title">
+            Contact <span>Me</span>
+        </div>
+        <div class="contact-content">
+            <div class="contact-details">
+                <%- desc[2].content %> 
+            </div>
+            <div class="contact-icons">
+                <%- desc[3].content %> 
+            </div>
+        </div>
+    </section>
+    <div class="to-top">
+        <button class="scroll-top" onclick="scrollToTop()" type="button">Back to top</button>
+    </div>
+</body>
+</html>
