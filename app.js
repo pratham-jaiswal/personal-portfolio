@@ -57,6 +57,10 @@ const projectsSchema = {
     category: {
         type: String,
         required: true,
+    },
+    date: {
+        type: Date,
+        required: true,
     }
 };
 
@@ -69,7 +73,7 @@ app.get("/", async function (req, res) {
     try {
         allDesc = await Desc.find();
         allSkills = await Skill.find();
-        allProjects = await Project.find();
+        allProjects = await Project.find().sort({ date: -1 });
     } catch (err) {
         console.log(err);
     }
