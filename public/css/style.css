@@ -241,6 +241,10 @@ a{
     backface-visibility: hidden;
 }
 
+.card-front{
+    transform: rotateY(0deg);
+}
+
 .card-back{
     transform: rotateY(180deg);
 }
@@ -358,6 +362,13 @@ a{
 .to-top .scroll-top:hover{
     background-color: rgb(210, 0, 210);
 }
+
+@-moz-document url-prefix() {
+    .back-container{
+        padding: 20px 16px 20px 26px;
+    }
+}
+  
 
 @media (pointer: coarse) {
     .flip-button {
