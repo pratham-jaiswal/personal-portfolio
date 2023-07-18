@@ -33,7 +33,7 @@
                     Pratham <span>Jaiswal</span>
                 </div>
                 <div class="brief-description">
-                    <%- desc[0].content %> 
+                    <%- desc.find(obj => obj.name == "About").content %>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
             About <span>Me</span>
         </div>
         <div class="about-content">
-            <%- desc[1].content %> 
+            <%- desc.find(obj => obj.name == "Introduction").content %> 
             <ul style="list-style-type: circle;">
                 <% for (var i=0; i<skills.length; i++){%>
                     <li><span><%= skills[i].name %>:</span> <%= skills[i].details %></li>
@@ -109,10 +109,10 @@
         </div>
         <div class="contact-content">
             <div class="contact-details">
-                <%- desc[2].content %> 
+                <%- desc.find(obj => obj.name == "Contact").content %> 
             </div>
             <div class="contact-icons">
-                <%- desc[3].content %> 
+                <%- desc.find(obj => obj.name == "Contact Links").content %> 
             </div>
         </div>
     </section>
