@@ -163,7 +163,7 @@ span{
     font-size: 20px;
 }
 
-#about a{
+a{
     text-decoration: none;
 }
 
@@ -241,6 +241,10 @@ span{
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+
+.card-front{
+    transform: rotateY(0deg);
 }
 
 .card-back{
@@ -359,6 +363,12 @@ span{
 
 .to-top .scroll-top:hover{
     background-color: rgb(210, 0, 210);
+}
+
+@-moz-document url-prefix() {
+    .back-container{
+        padding: 20px 10px 20px 26px;
+    }
 }
 
 @media (pointer: coarse) {

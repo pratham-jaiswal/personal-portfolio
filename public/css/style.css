@@ -365,7 +365,7 @@ a{
 
 @-moz-document url-prefix() {
     .back-container{
-        padding: 20px 16px 20px 26px;
+        padding: 20px 10px 20px 26px;
     }
 }
   
