@@ -9,77 +9,80 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect(process.env.URI+"/portfolioDB")
+mongoose.connect(process.env.URI+"/portfolioDB").then(() => {
 
-const descSchema = {
-    name: {
-      type: String,
-      required: true,
-    },
-    content: {
+    const descSchema = {
+        name: {
         type: String,
         required: true,
-    },
-};
+        },
+        content: {
+            type: String,
+            required: true,
+        },
+    };
 
-const Desc = mongoose.model("Description", descSchema);
+    const Desc = mongoose.model("Description", descSchema);
 
-const skillsSchema = {
-    name: {
-      type: String,
-      required: true,
-    },
-    details: {
+    const skillsSchema = {
+        name: {
         type: String,
         required: true,
-    },
-};
+        },
+        details: {
+            type: String,
+            required: true,
+        },
+    };
 
-const Skill = mongoose.model("Skill", skillsSchema);
+    const Skill = mongoose.model("Skill", skillsSchema);
 
-const projectsSchema = {
-    codeLink: String,
-    title: {
-      type: String,
-      required: true,
-    },
-    banner: {
+    const projectsSchema = {
+        codeLink: String,
+        title: {
         type: String,
         required: true,
-    },
-    technologies: {
-        type: [String],
-        required: true,
-    },
-    features: {
-        type: [String],
-        required: true,
-    },
-    category: {
-        type: String,
-        required: true,
-    },
-    date: {
-        type: Date,
-        required: true,
-    }
-};
+        },
+        banner: {
+            type: String,
+            required: true,
+        },
+        technologies: {
+            type: [String],
+            required: true,
+        },
+        features: {
+            type: [String],
+            required: true,
+        },
+        category: {
+            type: String,
+            required: true,
+        },
+        date: {
+            type: Date,
+            required: true,
+        }
+    };
 
-const Project = mongoose.model("Project", projectsSchema);
+    const Project = mongoose.model("Project", projectsSchema);
 
-app.get("/api/data", async (req, res) => {
-    try {
-        const allDesc = await Desc.find();
-        const allSkills = await Skill.find();
-        const allProjects = await Project.find().sort({ date: -1 });
-        return res.json({ desc: allDesc, skills: allSkills, projects: allProjects });
-    }
-    catch (err) {
-        console.log(err);
-        return res.status(500).json({ error: "Internal server error" });
-    }
-});
+    app.get("/api/data", async (req, res) => {
+        try {
+            const allDesc = await Desc.find();
+            const allSkills = await Skill.find();
+            const allProjects = await Project.find().sort({ date: -1 });
+            return res.json({ desc: allDesc, skills: allSkills, projects: allProjects });
+        }
+        catch (err) {
+            console.log(err);
+            return res.status(500).json({ error: "Internal server error" });
+        }
+    });
 
-app.listen(3001, () => {
-    console.log("Server started on port 3001"); // Use a different port for the API
+    app.listen(3001, () => {
+        console.log("Server started on port 3001"); // Use a different port for the API
+    });
+}).catch(err => {
+    console.error("MongoDB connection error:", err);
 });
