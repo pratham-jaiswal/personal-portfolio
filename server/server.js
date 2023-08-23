@@ -1,9 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
 require("dotenv").config();
 
-app.set("view engine", "ejs");
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -66,28 +67,19 @@ const projectsSchema = {
 
 const Project = mongoose.model("Project", projectsSchema);
 
-app.get("/", async function (req, res) {
-    let allDesc;
-    let allSkills;
-    let allProjects;
+app.get("/api/data", async (req, res) => {
     try {
-        allDesc = await Desc.find();
-        allSkills = await Skill.find();
-        allProjects = await Project.find().sort({ date: -1 });
-    } catch (err) {
-        console.log(err);
+        const allDesc = await Desc.find();
+        const allSkills = await Skill.find();
+        const allProjects = await Project.find().sort({ date: -1 });
+        return res.json({ desc: allDesc, skills: allSkills, projects: allProjects });
     }
-    return res.render("index", {
-        desc: allDesc,
-        skills: allSkills,
-        projects: allProjects,
-    });
+    catch (err) {
+        console.log(err);
+        return res.status(500).json({ error: "Internal server error" });
+    }
 });
 
-app.use((req, res) => {
-    return res.status(404).redirect("/");
+app.listen(3001, () => {
+    console.log("Server started on port 3001"); // Use a different port for the API
 });
-  
-app.listen(3000, () => {
-    console.log("Server started on port 3000");
-}); 
