@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face{
+    font-family: "neoneon";
+    src:
+        local('neoneon'), url(./fonts/Neoneon/Neoneon.ttf) format('truetype'),
+        local('neoneon'), url(./fonts/Neoneon/Neoneon.eot) format('embedded-opentype'),
+        local('neoneon'), url(./fonts/Neoneon/Neoneon.woff) format('woff'),
+        local('neoneon'), url(./fonts/Neoneon/Neoneon.svg) format('svg'),
+        local('neoneon'), url(./fonts/Neoneon/Neoneon.woff2) format('woff2');
+  
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgba(225, 0, 225, 0.469); 
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(225, 0, 225); 
+}
+
+.navbar{
+    overflow: hidden;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.theme-toggle{
+    float: left;
+    width: 35%;
+    margin: auto 20px;
+}
+
+.theme-toggle #theme-icon{
+    height: 20px;
+    cursor: pointer;
+}
+
+.nav-container{
+    float: right;
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-container .nav-link{
+    padding: 16px;
+    text-decoration: none;
+}
+
+.nav-container .active{
+    background-color: rgba(225, 0, 225, 0.469);
+}
+
+.nav-container .nav-link:hover:not(.active){
+    background-color: rgba(0, 0, 0, 0.265);
+}
+
+#brief{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 140px 0 140px;
+    background-image: url('https://i.imgur.com/zY5n6RB.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#brief-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#brief-container .brief-pic{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+#brief-container img{
+    border-radius: 50%;
+    width: 150px;
+}
+
+#brief-container .brief-text{
+    gap: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: -70px;
+    padding: 90px 30px 40px;
+}
+
+#brief-container .brief-name{
+    font-family: neoneon;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+span{
+    color: rgb(225, 0, 225);
+}
+
+#brief-container .brief-description{
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+}
+
+#about, #project, #contact{
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    padding: 50px 0;
+    gap: 20px;
+    top: 0;
+}
+
+#contact{
+    padding: 100px 0 50px;
+}
+
+#about .about-title, #project .project-title, #contact .contact-title{
+    font-family: neoneon;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#about .about-content{
+    text-align: justify;
+    font-size: 20px;
+}
+
+.about-content ul{
+    list-style-type: circle;
+}
+
+.about-content ul li{
+    margin: 10px 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#about, #contact, #project{
+    scroll-margin-top: 30px;
+}
+
+.project-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-navigation{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-navigation .projectCategory{
+    color:rgb(225, 0, 225);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-cards{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    row-gap: 40px;
+}
+
+#full-card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.project-cards a{
+    position: center;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.card-flip{
+    background-color: transparent;
+    width: 230px;
+    height: 380px;
+    perspective: 1000px;
+}
+
+.card{
+    position: relative;
+    width: 230px;
+    height: 380px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20);
+}
+
+.card-flip:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-front{
+    transform: rotateY(0deg);
+}
+
+.card-back{
+    transform: rotateY(180deg);
+}
+
+.card span{
+    font-weight: 600;
+}
+
+.card-front img{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.front-container, .back-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-description ul{
+    padding: 0 0 0 16px;
+    margin: 0 0 0;
+}
+
+.front-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 2px 16px;
+}
+
+.back-container{
+    padding: 20px 16px;
+}
+
+.back-container .card-title{
+    text-align: center;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.card-lang{
+    height: 50px;
+}
+
+.card-description{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flip-button{
+    display: none;
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.contact-details{
+    font-family: 'Comic Neue', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.contact-icons a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.contact-icons a:hover{
+    background-color: rgb(225, 0, 225);
+    border: 1px solid rgb(225, 0, 225);
+}
+
+.to-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.to-top .scroll-top{
+    height: 50px;
+    width: 120px;
+    margin: 100px auto;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Comic Neue', cursive;
+    background-color: rgb(225, 0, 225);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.to-top .scroll-top:hover{
+    background-color: rgb(210, 0, 210);
+}
+
+@-moz-document url-prefix() {
+    .back-container{
+        padding: 20px 10px 20px 26px;
+    }
+}
+
+@media (pointer: coarse) {
+    .flip-button {
+        display: block;
+        background-color: rgb(225, 0, 225);
+        text-align: center;
+        width: 230px;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Comic Neue', cursive;
+        background-color: rgb(225, 0, 225);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .card-flip:hover .card{
+        transform: rotateY(0);
+    }
+
+    .card-flip .card.flipped {
+        transform: rotateY(180deg);
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    body{
+        width: 100vw;
+    }
+
+    .contact-icons{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1430px) {
+    .project-cards{
+        grid-template-columns: 33% 33% 33%;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .project-cards{
+        grid-template-columns: 50% 50%;
+        justify-content: space-evenly;
+        gap: 100px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .project-navigation{
+        width: 100%;
+    }
+
+    .theme-toggle{
+        width: 20%;
+    }
+
+    .nav-container{
+        width: 50%;
+    }
+
+    .contact-icons{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .theme-toggle{
+        width: 20%;
+    }
+    
+    .nav-container{
+        width: 70%;
+    }
+
+    .project-cards{
+        grid-template-columns: 100%;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .contact-details{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .theme-toggle{
+        width: 10%;
+    }
+    
+    .nav-container{
+        width: 90%;
+    }
+
+    .contact-details{
+        font-size: 20px;
+    }
+
+    .contact-icons{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .theme-toggle{
+        margin: auto 10px;
+    }
+
+    .theme-toggle #theme-icon{
+        height: 20px;
+    }
+
+    .contact-details{
+        font-size: 18px;
+    }
+}
