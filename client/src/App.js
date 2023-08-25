@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("/api/data"); // Make sure to adjust the URL if needed
+        const response = await axios.get("/api/data");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
