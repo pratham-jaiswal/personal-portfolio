@@ -1,8 +1,9 @@
 const cors = require('cors');
 require("dotenv").config();
 
+const allowedUri = process.env.ALLOWED_URI;
 const allowedOrigins = [
-  process.env.ALLOWED_URI
+  allowedUri,
 ];
 
 const corsOptions = {
