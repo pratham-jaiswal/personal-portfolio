@@ -5,7 +5,7 @@ import moon from '../icons/moon.svg';
 export default function Navbar() {
 
     const darkToggle = () => {
-        console.log("hi")
+        // console.log("hi")
     }
 
     return (
