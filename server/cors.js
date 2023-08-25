@@ -1,9 +1,8 @@
 const cors = require('cors');
 require("dotenv").config();
 
-const allowedUri = process.env.ALLOWED_URI;
+console.log(process.env.ALLOWED_URI)
 const allowedOrigins = [
-  allowedUri,
   "https://pratham-jaiswal.onrender.com/"
 ];
 
