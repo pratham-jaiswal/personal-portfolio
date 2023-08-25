@@ -39,6 +39,15 @@ body{
     background: rgb(225, 0, 225); 
 }
 
+.loading-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 50px;
+}
+
 .navbar{
     overflow: hidden;
     width: 100vw;
