@@ -1,10 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
+const corsMiddleware = require('./cors');
 const app = express();
 require("dotenv").config();
 
-app.use(cors());
+app.use(corsMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -81,7 +81,7 @@ mongoose.connect(`${process.env.URI}/portfolioDB`).then(() => {
     });
 
     app.listen(3001, () => {
-        console.log("Server started on port 3001"); // Use a different port for the API
+        console.log("Server started on port 3001");
     });
 }).catch(err => {
     console.error("MongoDB connection error:", err);
