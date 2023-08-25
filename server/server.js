@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect(process.env.URI+"/portfolioDB").then(() => {
+mongoose.connect(`${process.env.URI}/portfolioDB`).then(() => {
 
     const descSchema = {
         name: {
