@@ -27,8 +27,6 @@ function App() {
 
   return (
     <div>
-      
-  {console.log(process.env)}
       {!data ? (
         <LoadingScreen />
       ) : (
