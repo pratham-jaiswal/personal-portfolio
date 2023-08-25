@@ -1,8 +1,8 @@
 const cors = require('cors');
+require("dotenv").config();
 
 const allowedOrigins = [
-    'http://localhost:3000/',
-    'https://pratham-jaiswal.onrender.com',
+  process.env.ALLOWED_URI
 ];
 
 const corsOptions = {
