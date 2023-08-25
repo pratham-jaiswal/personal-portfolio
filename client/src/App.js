@@ -8,14 +8,14 @@ import Brief from "./Components/Brief";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
+import LoadingScreen from "./Components/LoadingScreen";
 
 function App() {
-  const [data, setData] = useState({ desc: [], skills: [], projects: [] });
-
+  const [data, setData] = useState(null);
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("https://pratham-jaiswal-api.onrender.com/api/data");
+        const response = await axios.get(`${process.env.REACT_APP_API_URI}/api/data`);
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -27,19 +27,27 @@ function App() {
 
   return (
     <div>
-      <Navbar />
-      <Element name="brief" className="element">
-        <Brief brief={data.desc.find(obj => obj.name === "Introduction")} />
-      </Element>
-      <Element name="about" className="element">
-        <About about={data.desc.find(obj => obj.name === "About")} skills={data.skills} />
-      </Element>
-      <Element name="project" className="element">
-        <Projects projects={data.projects} />
-      </Element>
-      <Element name="contact" className="element">
-        <Contact contactDesc={data.desc.find(obj => obj.name === "Contact")} contactLinks={data.desc.find(obj => obj.name === "Contact Links")} />
-      </Element>
+      
+  {console.log(process.env)}
+      {!data ? (
+        <LoadingScreen />
+      ) : (
+        <div>
+          <Navbar />
+          <Element name="brief" className="element">
+            <Brief brief={data.desc.find(obj => obj.name === "Introduction").content} />
+          </Element>
+          <Element name="about" className="element">
+            <About about={data.desc.find(obj => obj.name === "About").content} skills={data.skills} />
+          </Element>
+          <Element name="project" className="element">
+            <Projects projects={data.projects} />
+          </Element>
+          <Element name="contact" className="element">
+            <Contact contactDesc={data.desc.find(obj => obj.name === "Contact").content} contactLinks={data.desc.find(obj => obj.name === "Contact Links").content} />
+          </Element>
+        </div>
+      )}
     </div>
   );
 }
