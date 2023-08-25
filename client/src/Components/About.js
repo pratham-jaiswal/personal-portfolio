@@ -8,13 +8,13 @@ export default function About({ about, skills }) {
             About <span>Me</span>
         </div>
         <div className="about-content">
-            {about? parse(about.content) : ""}
+            {parse(about)}
             <ul>
-                {skills? skills.map(skill => (
+                {skills.map(skill => (
                 <li key={skill._id}>
                     <span>{parse(skill.name)}:</span> {parse(skill.details)}
                 </li>
-                )):""}
+                ))}
             </ul>
         </div>
     </section>

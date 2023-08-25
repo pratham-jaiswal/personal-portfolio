@@ -13,7 +13,7 @@ export default function Brief({ brief }) {
                     Pratham <span>Jaiswal</span>
                 </div>
                 <div className="brief-description">
-                    {brief? parse(brief.content) : ""}
+                    {parse(brief)}
                 </div>
             </div>
         </div>

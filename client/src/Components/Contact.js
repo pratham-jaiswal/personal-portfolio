@@ -17,10 +17,10 @@ export default function Contact({ contactDesc, contactLinks }) {
                 </div>
                 <div className="contact-content">
                     <div className="contact-details">
-                        {contactDesc? parse(contactDesc.content) : ""}
+                        {parse(contactDesc)}
                     </div>
                     <div className="contact-icons">
-                        {contactLinks? parse(contactLinks.content) : ""}
+                        {parse(contactLinks)}
                     </div>
                 </div>
             </section>

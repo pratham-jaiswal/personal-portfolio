@@ -54,7 +54,7 @@ export default function Projects({ projects }) {
                 </div>
             </div>
             <div className="project-cards">
-            {filteredProjects? filteredProjects.map(project => (
+            {filteredProjects.map(project => (
                 <div id="full-card" className={project.category} key={project._id}>
                     <a target="_blank" rel="noreferrer" href={project.codeLink}>
                         <div className="card-flip">
@@ -97,7 +97,7 @@ export default function Projects({ projects }) {
                     </a>
                     <button className="flip-button" type="button" onClick={() => flipCard(project._id)}>Flip</button>
                 </div>
-            )): ""}
+            ))}
             </div>
         </div>
         </section>
