@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("/api/data");
+        const response = await axios.get("https://pratham-jaiswal-api.onrender.com/api/data");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
