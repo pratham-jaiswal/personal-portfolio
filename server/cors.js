@@ -3,7 +3,7 @@ require("dotenv").config();
 
 console.log(process.env.ALLOWED_URI)
 const allowedOrigins = [
-  "https://pratham-jaiswal.vercel.app"
+  process.env.ALLOWED_URI
 ];
 
 const corsOptions = {
