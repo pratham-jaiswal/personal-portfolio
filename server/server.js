@@ -1,10 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const corsMiddleware = require('./cors');
 const app = express();
 require("dotenv").config();
 
-app.use(corsMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
