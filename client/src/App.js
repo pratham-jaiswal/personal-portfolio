@@ -25,6 +25,18 @@ function App() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const pingInterval = setInterval(() => {
+      // Make a request to the server to keep it awake
+      axios.get(`${process.env.REACT_APP_API_URI}/ping`);
+    }, 1000 * 60 * 10);
+
+    // Clear the interval when the component unmounts
+    return () => {
+      clearInterval(pingInterval);
+    };
+  }, []);
+
   return (
     <div>
       {!data ? (
