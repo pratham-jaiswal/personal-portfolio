@@ -1,5 +1,5 @@
 # Personal Portfolio Website
-The [website](https://pratham-jaiswal.onrender.com/) showcases my skills, projects, and provides information about me. It is designed to highlight my experience and expertise in development and programming.
+The [website](https://pratham-jaiswal.vercel.app/) showcases my skills, projects, and provides information about me. It is designed to highlight my experience and expertise in development and programming.
 
 <br/><br/>
 
