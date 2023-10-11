@@ -4,7 +4,6 @@ const corsMiddleware = require('./cors');
 const app = express();
 require("dotenv").config();
 
-app.use(corsMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -67,7 +66,7 @@ mongoose.connect(`${process.env.MONGODB_URI}/portfolioDB`).then(() => {
 
     const Project = mongoose.model("Project", projectsSchema);
 
-    app.get("/api/data", async (req, res) => {
+    app.get("/api/data", corsMiddleware, async (req, res) => {
         try {
             const allDesc = await Desc.find();
             const allSkills = await Skill.find();
@@ -77,6 +76,16 @@ mongoose.connect(`${process.env.MONGODB_URI}/portfolioDB`).then(() => {
         catch (err) {
             console.log(err);
             return res.status(500).json({ error: "Internal server error" });
+        }
+    });
+
+    app.get("/api/cohereKey", async (req, res) => {
+        try {
+            const cohereKey = process.env.COHERE_API_KEY;
+            res.json({ cohereKey });
+        }
+        catch (err) {
+            console.log(err);
         }
     });
 
