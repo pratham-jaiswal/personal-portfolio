@@ -500,3 +500,69 @@ a{
         font-size: 18px;
     }
 }
+
+.light{
+    .navbar{
+        box-shadow: 0 2px  rgba(136, 136, 136, 0.292);
+    }
+    
+    .navbar, #brief-container .brief-text{
+        background-color: white;
+    }
+    
+    .nav-container a, .project-navigation .active, .project-cards a{
+        color: black;
+    }
+    
+    #brief-container img{
+        border: 3px solid white;
+    }
+    
+    .card{
+        background-color: rgb(245, 245, 245);
+    }
+    
+    .contact-icons a, .to-top .scroll-top{
+        color: white;
+    }
+    
+    .contact-icons a{
+        background-color: black;
+        border: 1px solid black;
+    }
+}
+
+.dark{
+    background-color: rgb(40, 40, 40);
+    color: white;
+    
+    .nav-container a, .project-navigation .active, .project-cards a{
+        color: white;
+    }
+    
+    ::-webkit-scrollbar-track{
+        background: rgb(103, 103, 103);
+    }
+    
+    .navbar{
+        background-color: rgb(40, 40, 40);
+        box-shadow: 0 2px rgba(32, 32, 32, 0.602);
+    }
+    
+    #brief-container img{
+        border: 3px solid rgb(81, 81, 81);
+    }
+    
+    #brief-container .brief-text, .card{
+        background-color: rgb(81, 81, 81);
+    }
+    
+    .contact-icons a, .to-top .scroll-top{
+        color: black;
+    }
+    
+    .contact-icons a{
+        background-color: white;
+        border: 1px solid white;
+    }
+}

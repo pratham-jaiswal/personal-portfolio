@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Element } from 'react-scroll';
-import './App.css';
-import './Light.css';
+import './App.scss';
+import moon from './icons/moon.svg';
+import sun from './icons/sun.svg';
+// import './Light.css';
 import Navbar from './Components/Navbar';
 import Brief from "./Components/Brief";
 import About from "./Components/About";
@@ -12,6 +14,8 @@ import LoadingScreen from "./Components/LoadingScreen";
 
 function App() {
   const [data, setData] = useState(null);
+  const [theme, setTheme] = useState("light");
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -25,24 +29,29 @@ function App() {
     fetchData();
   }, []);
 
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+
   return (
-    <div>
+    <div className={`${theme}`}>
       {!data ? (
         <LoadingScreen />
       ) : (
         <div>
-          <Navbar />
-          <Element name="brief" className="element">
-            <Brief brief={data.desc.find(obj => obj.name === "Introduction").content} />
+          <Navbar toggleTheme={toggleTheme} theme={theme} icon={theme === "light" ? moon:sun}/>
+          <Element name="brief" className="element" >
+            <Brief brief={data.desc.find(obj => obj.name === "Introduction").content} theme={theme} />
           </Element>
           <Element name="about" className="element">
-            <About about={data.desc.find(obj => obj.name === "About").content} skills={data.skills} />
+            <About about={data.desc.find(obj => obj.name === "About").content} skills={data.skills} theme={theme} />
           </Element>
           <Element name="project" className="element">
-            <Projects projects={data.projects} />
+            <Projects projects={data.projects} theme={theme} />
           </Element>
           <Element name="contact" className="element">
-            <Contact contactDesc={data.desc.find(obj => obj.name === "Contact").content} contactLinks={data.desc.find(obj => obj.name === "Contact Links").content} />
+            <Contact contactDesc={data.desc.find(obj => obj.name === "Contact").content} contactLinks={data.desc.find(obj => obj.name === "Contact Links").content} theme={theme} />
           </Element>
         </div>
       )}

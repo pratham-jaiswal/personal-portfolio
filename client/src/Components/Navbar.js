@@ -1,18 +1,13 @@
 import React from 'react'
 import { Link } from 'react-scroll';
-import moon from '../icons/moon.svg';
 
-export default function Navbar() {
-
-    const darkToggle = () => {
-        // console.log("hi")
-    }
+export default function Navbar({toggleTheme, icon}) {
 
     return (
         <div>
             <nav className="navbar">
                 <div className="theme-toggle">
-                    <img onClick={darkToggle()} id="theme-icon" src={moon} alt="toggle light/dark mode" />
+                    <img onClick={toggleTheme} id="theme-icon" src={icon} alt="toggle light/dark mode" />
                 </div>
 
                 <div className="nav-container">
