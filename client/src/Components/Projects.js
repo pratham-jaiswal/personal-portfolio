@@ -41,6 +41,12 @@ export default function Projects({ projects }) {
                         App
                     </div>
                     <div
+                        className={`projectCategory ${projectCategory === 'game' ? 'active' : ''}`}
+                        onClick={() => setProjectCategory('game')}
+                    >
+                        Games
+                    </div>
+                    <div
                         className={`projectCategory ${projectCategory === 'mlai' ? 'active' : ''}`}
                         onClick={() => setProjectCategory('mlai')}
                     >
