@@ -35,7 +35,7 @@ export default function Projects({ projects }) {
                         Web
                     </div>
                     <div
-                        className={`projectCategory ${projectCategory === 'web' ? 'active' : ''}`}
+                        className={`projectCategory ${projectCategory === 'app' ? 'active' : ''}`}
                         onClick={() => setProjectCategory('app')}
                     >
                         App
