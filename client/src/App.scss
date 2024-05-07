@@ -135,9 +135,19 @@ span{
     color: rgb(225, 0, 225);
 }
 
+#brief-container .brief-pre{
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+    align-self: center;
+    margin: 20px 0 0;
+}
+
 #brief-container .brief-description{
     font-family: 'Comic Neue', cursive;
     font-size: 20px;
+    width: 50%;
+    align-self: center;
+    margin: 20px 0;
 }
 
 #about, #project, #contact{
@@ -438,6 +448,14 @@ a{
         justify-content: space-evenly;
         gap: 100px;
         margin: 0 auto;
+    }
+
+    #brief-container .brief-description{
+        font-family: 'Comic Neue', cursive;
+        font-size: 20px;
+        width: 90%;
+        align-self: center;
+        margin: 20px 0 0;
     }
 }
 
