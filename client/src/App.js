@@ -14,7 +14,7 @@ import LoadingScreen from "./Components/LoadingScreen";
 
 function App() {
   const [data, setData] = useState(null);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
     async function fetchData() {
@@ -31,6 +31,7 @@ function App() {
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
     setTheme(newTheme);
   };
 
