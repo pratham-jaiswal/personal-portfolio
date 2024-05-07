@@ -163,6 +163,17 @@ span{
 #about .about-content{
     text-align: justify;
     font-size: 20px;
+
+    .skill-list {
+        display: grid;
+        margin: 30px 0 ;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 30px;
+
+        img {
+            box-shadow: 2px 2px 5px rgb(225, 0, 225);
+        }
+    }
 }
 
 .about-content ul{
@@ -233,7 +244,7 @@ a{
     transition: transform 0.6s;
     transform-style: preserve-3d;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20);
+    box-shadow: 0 4px 8px 0 rgb(225, 0, 225, 0.3);
 }
 
 .card-flip:hover .card{
@@ -503,7 +514,7 @@ a{
 
 .light{
     .navbar{
-        box-shadow: 0 2px  rgba(136, 136, 136, 0.292);
+        box-shadow: 0 2px  rgb(225, 0, 225, 0.5);
     }
     
     .navbar, #brief-container .brief-text{
@@ -546,7 +557,7 @@ a{
     
     .navbar{
         background-color: rgb(40, 40, 40);
-        box-shadow: 0 2px rgba(32, 32, 32, 0.602);
+        box-shadow: 0 2px rgb(225, 0, 225, 0.5);
     }
     
     #brief-container img{

@@ -28,7 +28,7 @@ mongoose.connect(`${process.env.MONGODB_URI}/portfolioDB`).then(() => {
         type: String,
         required: true,
         },
-        details: {
+        shield: {
             type: String,
             required: true,
         },
