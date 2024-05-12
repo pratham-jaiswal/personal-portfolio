@@ -4,7 +4,6 @@ import { Element } from 'react-scroll';
 import './App.scss';
 import moon from './icons/moon.svg';
 import sun from './icons/sun.svg';
-// import './Light.css';
 import Navbar from './Components/Navbar';
 import Brief from "./Components/Brief";
 import About from "./Components/About";
