@@ -1,3 +1,10 @@
+*{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 html,
 body{
     height: 100vh;
@@ -63,6 +70,7 @@ body{
 .nav-container .nav-link{
     padding: 16px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-container .active{
@@ -110,8 +118,8 @@ body{
 }
 
 #brief-container .brief-name{
-    font-family: neoneon;
-    font-size: 30px;
+    font-family: "Londrina Outline", sans-serif;
+    font-size: 40px;
     font-style: italic;
     font-weight: bold;
 }
@@ -150,7 +158,7 @@ span{
 }
 
 #about .about-title, #project .project-title, #contact .contact-title{
-    font-family: neoneon, Arial, sans-serif;;
+    font-family: "Londrina Outline", sans-serif;
     font-size: 40px;
     font-weight: bold;
 }
