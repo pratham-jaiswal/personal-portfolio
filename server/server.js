@@ -7,7 +7,7 @@ require("dotenv").config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static("public", { maxAge: 30 * 24 * 60 * 60 * 1000 }));
 app.use(compression());
 
 mongoose.connect(`${process.env.MONGODB_URI}/portfolioDB`).then(() => {
