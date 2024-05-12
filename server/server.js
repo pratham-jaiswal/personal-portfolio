@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const compression = require("compression");
 const corsMiddleware = require('./cors');
 const app = express();
 require("dotenv").config();
@@ -7,6 +8,7 @@ require("dotenv").config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use(compression());
 
 mongoose.connect(`${process.env.MONGODB_URI}/portfolioDB`).then(() => {
 
