@@ -97,3 +97,5 @@ mongoose.connect(`${process.env.MONGODB_URI}/portfolioDB`).then(() => {
 }).catch(err => {
     console.error("MongoDB connection error:", err);
 });
+
+module.exports = app;
