@@ -16,6 +16,9 @@ export default function About({ about, skills }) {
               key={parse(skill._id)}
               src={parse(skill.shield)}
               alt={parse(skill.name)}
+              style={{
+                height: "35px",
+              }}
             />
           ))}
         </div>

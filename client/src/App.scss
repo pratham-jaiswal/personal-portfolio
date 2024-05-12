@@ -56,7 +56,6 @@ body{
 }
 
 .theme-toggle #theme-icon{
-    height: 20px;
     cursor: pointer;
 }
 
@@ -515,10 +514,6 @@ a{
 @media screen and (max-width: 420px) {
     .theme-toggle{
         margin: auto 10px;
-    }
-
-    .theme-toggle #theme-icon{
-        height: 20px;
     }
 
     .contact-details{

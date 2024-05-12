@@ -7,7 +7,7 @@ export default function Navbar({toggleTheme, icon}) {
         <div>
             <nav className="navbar">
                 <div className="theme-toggle">
-                    <img onClick={toggleTheme} id="theme-icon" src={icon} alt="toggle light/dark mode" />
+                    <img onClick={toggleTheme} id="theme-icon" src={icon} alt="toggle light/dark mode" style={{height: "20px"}} />
                 </div>
 
                 <div className="nav-container">
