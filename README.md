@@ -1,5 +1,5 @@
 # Personal Portfolio Website
-The [website](https://pratham-jaiswal.vercel.app/) showcases my skills, projects, and provides information about me. It is designed to highlight my experience and expertise in development and programming.
+The [website](https://pratham-jaiswal.club) showcases my skills, projects, and provides information about me. It is designed to highlight my experience and expertise in development and programming.
 
 <br/><br/>
 
@@ -19,7 +19,7 @@ The [website](https://pratham-jaiswal.vercel.app/) showcases my skills, projects
 ## Getting Started
 To run this on your local system, firstly clone this repository to your local machine:
 ```bash
-git clone https://github.com/pratham-jaiswal/sharepad.git
+git clone https://github.com/pratham-jaiswal/personal-portfolio.git
 ```
 
 <br/><br/>
@@ -27,27 +27,10 @@ git clone https://github.com/pratham-jaiswal/sharepad.git
 > Rest of the details will be updated
 
 ## Screenshots
-| ![Imgur](https://i.imgur.com/2ZphiRY.png) |
-|:--:|
-| <i>Home</i>|
-<br/><br/>
+![](https://i.imgur.com/hJH4Ssj.jpg)
 
-| ![Imgur](https://i.imgur.com/4Tv5mxF.png) |
-|:--:|
-| <i>About</i>|
-<br/><br/>
+![](https://i.imgur.com/GyPJvfe.jpg)
 
-| ![Imgur](https://i.imgur.com/EuJRYJK.png) |
-|:--:|
-| <i>Projects</i>|
-<br/><br/>
+![](https://i.imgur.com/0XEG7hz.jpg)
 
-| ![Imgur](https://i.imgur.com/Fg0AWKg.png) |
-|:--:|
-| <i>Project - Flipped Card</i>|
-<br/><br/>
-
-| ![Imgur](https://i.imgur.com/jIJ5hmL.png) |
-|:--:|
-| <i>Contact</i>|
-<br/><br/>
+![](https://i.imgur.com/bg2ZKOa.jpg)
