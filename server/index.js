@@ -68,6 +68,8 @@ mongoose.connect(`${process.env.MONGODB_URI}/portfolioDB`).then(() => {
 
     const Project = mongoose.model("Project", projectsSchema);
 
+    const port = process.env.PORT || 3001;
+
     app.get("/api/data", corsMiddleware, async (req, res) => {
         try {
             const allDesc = await Desc.find();
@@ -100,8 +102,8 @@ mongoose.connect(`${process.env.MONGODB_URI}/portfolioDB`).then(() => {
         }
     });
 
-    app.listen(3001, () => {
-        console.log("Server started on port 3001");
+    app.listen(port, () => {
+        console.log("Server started on port "+port);
     });
 }).catch(err => {
     console.error("MongoDB connection error:", err);
