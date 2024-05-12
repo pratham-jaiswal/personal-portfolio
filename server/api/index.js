@@ -81,6 +81,15 @@ mongoose.connect(`${process.env.MONGODB_URI}/portfolioDB`).then(() => {
         }
     });
 
+    app.get("/", async (req, res) => {
+        try {
+            res.send("Server is running");
+        }
+        catch (err) {
+            console.log(err);
+        }
+    });
+
     app.get("/api/cohereKey", async (req, res) => {
         try {
             const cohereKey = process.env.COHERE_API_KEY;
