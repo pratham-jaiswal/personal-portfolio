@@ -76,7 +76,7 @@ export default function Projects({ projects }) {
                                     key={project._id}
                                 >
                                     <div className="card-front">
-                                        <img src={project.banner} alt="project-thumbnail" />
+                                        <img src={project.banner} alt="project-thumbnail" loading="lazy" />
                                         <div className="front-container">
                                             <div className="card-title">{parse(project.title)}</div>
                                             <div className="card-lang">

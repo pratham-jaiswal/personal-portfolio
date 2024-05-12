@@ -17,6 +17,7 @@ export default function About({ about, skills }) {
               src={parse(skill.shield)}
               alt={parse(skill.name)}
               height="35px"
+              loading="lazy"
             />
           ))}
         </div>
