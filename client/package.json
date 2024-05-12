@@ -10,7 +10,8 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
-    "react-spinners": "^0.13.8"
+    "react-spinners": "^0.13.8",
+    "sass": "^1.77.1"
   },
   "scripts": {
     "start": "react-scripts start",
