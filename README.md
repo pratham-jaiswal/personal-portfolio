@@ -1,8 +1,6 @@
 # Personal Portfolio Website
 The [website](https://pratham-jaiswal.club) showcases my skills, projects, and provides information about me. It is designed to highlight my experience and expertise in development and programming.
 
-<br/><br/>
-
 ## Features
 - A single page, smooth, and elegant website
 - Responsive for all devices
@@ -14,17 +12,11 @@ The [website](https://pratham-jaiswal.club) showcases my skills, projects, and p
 - Click on the project card to visit the github repository of the project
 - Lists all my socials
 
-<br/><br/>
-
 ## Getting Started
 To run this on your local system, firstly clone this repository to your local machine:
 ```bash
 git clone https://github.com/pratham-jaiswal/personal-portfolio.git
 ```
-
-<br/><br/>
-
-> Rest of the details will be updated
 
 ## Screenshots
 ![](https://i.imgur.com/hJH4Ssj.jpg)
