@@ -364,10 +364,66 @@ a {
   display: none;
 }
 
-.contact-content {
-  display: flex;
+.contact-form {
+  width: 50%;
+  align-self: center;
+  display: grid;
   flex-direction: column;
-  gap: 70px;
+  margin-bottom: 50px;
+  gap: 20px;
+
+  input,
+  textarea {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(225, 0, 225);
+    box-shadow: 2px 2px 5px rgb(225, 0, 225);
+    outline: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+  }
+
+  input::selection, textarea::selection {
+    background-color: rgb(225, 0, 225, 0.7);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(255, 255, 255, 0.555);
+  }
+
+  button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Comic Neue", cursive;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(225, 0, 225);
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: transparent;
+    border: 2px solid rgb(225, 0, 225);
+    color: black;
+  }
+
+  .status {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .status.success {
+    color: green;
+  }
+
+  .status.error {
+    color: red;
+  }
 }
 
 .contact-details {
@@ -620,6 +676,29 @@ a {
   #brief-container .brief-text,
   .card {
     background-color: rgb(81, 81, 81);
+  }
+
+  .contact-form {
+    width: 50%;
+    align-self: center;
+    display: grid;
+    flex-direction: column;
+    gap: 20px;
+
+    input,
+    textarea {
+      background-color: rgb(81, 81, 81);
+      color: white;
+      resize: none;
+    }
+
+    button:hover {
+      color: white;
+    }
+
+    .status.success {
+      color: yellowgreen;
+    }
   }
 
   .contact-icons a,
