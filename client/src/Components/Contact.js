@@ -36,6 +36,7 @@ export default function Contact({ contactLinks }) {
           }, 5000);
         },
         (error) => {
+          console.log(error.text)
           setStatus({
             message: "Oops! Something went wrong while sending your message. Please try again later or use alternative contact options below.",
             type: "error",
