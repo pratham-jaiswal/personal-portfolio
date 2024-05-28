@@ -10,10 +10,5 @@ The [website](https://pratham-jaiswal.club) showcases my skills, projects, and p
 - Hover over the project card to see the features of each project
 - For touch devices click on the flip button to see the features of each project
 - Click on the project card to visit the github repository of the project
+- A contact form to contact me
 - Lists all my socials
-
-## Getting Started
-To run this on your local system, firstly clone this repository to your local machine:
-```bash
-git clone https://github.com/pratham-jaiswal/personal-portfolio.git
-```
