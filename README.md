@@ -17,12 +17,3 @@ To run this on your local system, firstly clone this repository to your local ma
 ```bash
 git clone https://github.com/pratham-jaiswal/personal-portfolio.git
 ```
-
-## Screenshots
-![](https://i.imgur.com/hJH4Ssj.jpg)
-
-![](https://i.imgur.com/GyPJvfe.jpg)
-
-![](https://i.imgur.com/0XEG7hz.jpg)
-
-![](https://i.imgur.com/bg2ZKOa.jpg)
