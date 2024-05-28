@@ -51,7 +51,7 @@ function App() {
             <Projects projects={data.projects} theme={theme} />
           </Element>
           <Element name="contact" className="element">
-            <Contact contactDesc={data.desc.find(obj => obj.name === "Contact").content} contactLinks={data.desc.find(obj => obj.name === "Contact Links").content} theme={theme} />
+            <Contact contactLinks={data.desc.find(obj => obj.name === "Contact Links").content} theme={theme} />
           </Element>
         </div>
       )}
