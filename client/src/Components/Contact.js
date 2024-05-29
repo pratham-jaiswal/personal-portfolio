@@ -91,7 +91,7 @@ export default function Contact({ contactLinks }) {
           <div className={`status ${status.type}`}>{status.message}</div>
           <input type="text" name="user_name" placeholder="Name" required />
           <input type="email" name="user_email" placeholder="Email" required />
-          <input type="text" name="app_name" value="" disabled hidden />
+          <input type="text" name="app_name" value="" hidden />
           <textarea
             placeholder="Message"
             cols="30"
