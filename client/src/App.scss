@@ -367,6 +367,7 @@ a {
 .contact-form {
   width: 50%;
   align-self: center;
+  align-items: center;
   display: grid;
   flex-direction: column;
   margin-bottom: 50px;
@@ -382,6 +383,7 @@ a {
     outline: none;
     font-family: "Nunito Sans", sans-serif;
     font-size: 16px;
+    resize: none;
   }
 
   input::selection, textarea::selection {
@@ -564,6 +566,10 @@ a {
   .contact-icons {
     width: 70%;
   }
+
+  .contact-form {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 710px) {
@@ -679,17 +685,10 @@ a {
   }
 
   .contact-form {
-    width: 50%;
-    align-self: center;
-    display: grid;
-    flex-direction: column;
-    gap: 20px;
-
     input,
     textarea {
       background-color: rgb(81, 81, 81);
       color: white;
-      resize: none;
     }
 
     button:hover {
