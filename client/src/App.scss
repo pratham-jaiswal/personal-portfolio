@@ -192,14 +192,6 @@ span {
 
 #about,
 #project,
-#contact-container {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 1s ease-out, opacity 1s ease-out;
-}
-
-#about,
-#project,
 #contact {
   scroll-margin-top: 30px;
 }
