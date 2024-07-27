@@ -18,32 +18,32 @@ export default function Projects({ projects }) {
     }
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const projectsSection = document.getElementById("project");
-      const projectCard = document.querySelectorAll(
-        ".project-cards #full-card"
-      );
+  const handleScroll = () => {
+    const projectsSection = document.getElementById("project");
+    const projectCard = document.querySelectorAll(
+      ".project-cards #full-card"
+    );
 
-      if (projectsSection) {
-        const rect = projectsSection.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
-          projectsSection.classList.add("visible");
-        } else {
-          projectsSection.classList.remove("visible");
-        }
+    if (projectsSection) {
+      const rect = projectsSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+        projectsSection.classList.add("visible");
+      } else {
+        projectsSection.classList.remove("visible");
       }
+    }
 
-      projectCard.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add("visible");
-        } else {
-          el.classList.remove("visible");
-        }
-      });
-    };
+    projectCard.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add("visible");
+      } else {
+        el.classList.remove("visible");
+      }
+    });
+  };
 
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     handleScroll();
@@ -52,6 +52,10 @@ export default function Projects({ projects }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    handleScroll();
+  }, [projectCategory]);
 
   return (
     <section id="project">
