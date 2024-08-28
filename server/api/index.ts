@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const compression = require("compression");
-const corsMiddleware = require("./cors");
+// const corsMiddleware = require("./cors");
 const app = express();
 require("dotenv").config();
 
@@ -9,6 +9,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public", { maxAge: 30 * 24 * 60 * 60 * 1000 }));
 app.use(compression());
+
+const allowedOrigins = [
+  process.env.ALLOWED_URI1,
+  process.env.ALLOWED_URI2
+];
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
 
 mongoose
   .connect(`${process.env.MONGODB_URI}/portfolioDB`)
@@ -71,7 +86,7 @@ mongoose
 
     const port = process.env.PORT || 3001;
 
-    app.get("/api/data", corsMiddleware, async (req, res) => {
+    app.get("/api/data", cors(corsOptions), async (req, res) => {
       try {
         const allDesc = await Desc.find();
         const allSkills = await Skill.find();
